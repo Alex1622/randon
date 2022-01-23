@@ -7,6 +7,7 @@ function clear() {
     document.getElementById('inputText').value = ''
 }
 
+
 document.getElementById('live').innerHTML = 'Your Chance ' + chance;
 document.getElementById('myButton').onclick = function findRandom() {
     let myNumber = document.getElementById('inputText').value;
@@ -34,7 +35,6 @@ document.getElementById('myButton').onclick = function findRandom() {
         document.location.reload()
         return
     }
-
 }
 
 
