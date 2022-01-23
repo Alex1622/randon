@@ -10,10 +10,7 @@ function clear() {
 document.getElementById('live').innerHTML = 'Your Chance ' + chance;
 document.getElementById('myButton').onclick = function findRandom() {
     let myNumber = document.getElementById('inputText').value;
-    if (chance === 0) {
-        document.location.reload();
-        alert('You Lost! Random number is ' + random );
-    } else if (myNumber === 0) {
+    if (myNumber === 0) {
         document.getElementById('text').innerHTML = 'Enter only 1-10';
     } else if (myNumber < 1 || myNumber > 10) {
         document.getElementById('text').innerHTML = 'Enter only 1-10';
@@ -26,12 +23,17 @@ document.getElementById('myButton').onclick = function findRandom() {
         chance--;
         document.getElementById('live').innerHTML = 'Your Chance ' + chance;
     } else if (myNumber == random) {
-        alert('Victory... ' );
+        alert('Victory...' );
         document.location.reload()
     } else {
         document.getElementById('text').innerHTML = 'Enter only 1-10';
     }
     clear()
+    if (chance === 0) {
+        alert('You Lost! Random number is ' + random );
+        return
+    }
+
 }
 
 
