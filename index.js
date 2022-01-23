@@ -8,7 +8,7 @@ function clear() {
 }
 
 
-document.getElementById('live').innerHTML = 'Your Chance ' + chance;
+document.getElementById('life').innerHTML = 'Your Chance ' + chance;
 document.getElementById('myButton').onclick = function findRandom() {
     let myNumber = document.getElementById('inputText').value;
     if (myNumber === 0) {
@@ -18,11 +18,11 @@ document.getElementById('myButton').onclick = function findRandom() {
     } else if (myNumber > random) {
         document.getElementById('text').innerHTML = 'A Little Less';
         chance--;
-        document.getElementById('live').innerHTML = 'Your Chance ' + chance;
+        document.getElementById('life').innerHTML = 'Your Chance ' + chance;
     } else if (myNumber < random) {
         document.getElementById('text').innerHTML = 'Slightly More';
         chance--;
-        document.getElementById('live').innerHTML = 'Your Chance ' + chance;
+        document.getElementById('life').innerHTML = 'Your Chance ' + chance;
     } else if (myNumber == random) {
         alert('Victory...' );
         document.location.reload()
