@@ -31,6 +31,7 @@ document.getElementById('myButton').onclick = function findRandom() {
     clear()
     if (chance === 0) {
         alert('You Lost! Random number is ' + random );
+        document.location.reload()
         return
     }
 
